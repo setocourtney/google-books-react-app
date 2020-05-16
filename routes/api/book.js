@@ -2,13 +2,13 @@
 const router = require("express").Router();
 const bookController = require("../../controllers/bookController");
 
-// api/profile
+// api/books
 router.route("/")
   .get(bookController.findAll)
   .post(bookController.addOne)
   
-// api/profile/:id   
+// api/books/:id   
 router.route("/:id")
-  .delete(bookContorller.deleteOne)
+  .delete(bookController.deleteOne)
 
 module.exports = router;
