@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
+    volumeId: {
+        type: String
+    },
     title: {
         type: String
     },
@@ -16,6 +19,12 @@ const BookSchema = new Schema({
         type: String
     },
     link: {
+        type: String
+    },
+    pageCount: {
+        type: Number
+    },
+    publishedDate: {
         type: String
     }
 });

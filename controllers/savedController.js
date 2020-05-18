@@ -14,7 +14,8 @@ module.exports = {
             .catch(err => {res.status(422).json(err)});
     },
     deleteOne: function(req, res) {
-        db.Book.delete({ _id: req.params.id })
+        db.Book.findById({ _id: req.params.id })
+            .then(found => found.remove())
             .then(data => res.json(data))
             .catch(err => res.status(422).json(err));
     }
