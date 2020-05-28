@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const cors = require("cors");
 
 // Define express middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +20,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://googlebooks:password1@ds2
 
 // Define API routes here
 app.use(routes);
+
+// Add cors so that frontend can talk to backend
+app.use(cors());
 
 // Send every other request to the React app
 // Define any API routes before this runs
