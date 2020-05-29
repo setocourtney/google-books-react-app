@@ -14,7 +14,7 @@ const Nav = () => {
     <div>
       <nav>
         <div className="nav-wrapper">
-            <Link to="/"className="brand-logo"><img src="./favicon.ico" sytle={{ height: "50px" }} /></Link>
+            <Link to="/"className="brand-logo"><img src="./favicon.ico" style={{ height: "32px" }} /></Link>
             <a href="#" data-target="mobile-menu" className="sidenav-trigger"><i className="material-icons">menu</i></a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li className={location.pathname === "/search" ? "active" : ""}><Link to="/search"><i className="material-icons">search</i></Link></li>
