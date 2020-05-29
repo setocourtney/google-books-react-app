@@ -22,7 +22,7 @@ const BookSchema = new Schema({
         type: String
     },
     pageCount: {
-        type: Number
+        type: String
     },
     publishedDate: {
         type: String
