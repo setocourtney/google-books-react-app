@@ -72,8 +72,8 @@ typings/
 .env
 .env.test
 
-# api key
-config.js
+# # api key
+# config.js
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
