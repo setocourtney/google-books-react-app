@@ -1,4 +1,5 @@
-const API_KEY = require("../config/config").GOOGLE_BOOKS_API_KEY;
+// const API_KEY = require("./config/config").GOOGLE_BOOKS_API_KEY;
+const API_KEY = 'AIzaSyCctVpofWn9ARgbyuIrzEeno564nC56ISg';
 
 const URL = "https://www.googleapis.com/books/v1/volumes?fields=items(id, volumeInfo(title, authors, description, publishedDate, pageCount, previewLink, imageLinks/thumbnail))&";
 const axios = require("axios");
