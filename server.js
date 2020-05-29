@@ -15,14 +15,17 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(express.static(__dirname + "/client/public"));
+
 // Initialize MongoDb connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://googlebooks:password1@ds257579.mlab.com:57579/heroku_mr22jrm6");
+
+// Add cors so that frontend can talk to backend
+app.use(cors());
 
 // Define API routes here
 app.use(routes);
 
-// Add cors so that frontend can talk to backend
-app.use(cors());
 
 // Send every other request to the React app
 // Define any API routes before this runs
