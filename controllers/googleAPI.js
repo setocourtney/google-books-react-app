@@ -1,5 +1,3 @@
-// const API_KEY = require("./config/config").GOOGLE_BOOKS_API_KEY;
-// heroku config:set GOOGLE_BOOKS_API_KEY='AIzaSyCctVpofWn9ARgbyuIrzEeno564nC56ISg'
 const API_KEY = process.env.GOOGLE_BOOKS_API_KEY || require("./config/config").GOOGLE_BOOKS_API_KEY;
 
 const URL = "https://www.googleapis.com/books/v1/volumes?fields=items(id, volumeInfo(title, authors, description, publishedDate, pageCount, previewLink, imageLinks/thumbnail))&";
